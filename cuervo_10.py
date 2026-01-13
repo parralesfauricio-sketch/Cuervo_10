@@ -1,9 +1,3 @@
-"""
-Cuervo_10
-Saludo bilingüe (Español / Ruso)
-Nivel: Principiante / Junior
-"""
-
 import datetime
 
 
@@ -13,20 +7,19 @@ def saludo(hora=None):
 
     if 5 <= hora < 12:
         return "¡Buenos días!", "Доброе утро!"
-    elif 12 <= hora < 18:
+    if 12 <= hora < 18:
         return "¡Buenas tardes!", "Добрый день!"
-    elif 18 <= hora < 22:
+    if 18 <= hora < 22:
         return "¡Buenas noches!", "Добрый вечер!"
-    else:
-        return "¡Hola!", "Привет!"
+    return "¡Hola!", "Привет!"
 
 
 nombre = input("¿Cómo te llamas? / Как тебя зовут? ").strip() or "Crack"
 es, ru = saludo()
 ahora = datetime.datetime.now()
 
-print("\n" + "─" * 45)
+print("\n" + "-" * 45)
 print(f"  {es} {nombre}")
 print(f"  {ru} {nombre}")
-print(f"  {ahora:%d/%m/%Y  %H:%M}")
-print("─" * 45)
+print(f"  {ahora:%d/%m/%Y %H:%M}")
+print("-" * 45)
