@@ -1,9 +1,7 @@
 """
 Cuervo_10
-Programa de saludo bilingüe (Español / Ruso)
-
+Saludo bilingüe (Español / Ruso)
 Nivel: Principiante / Junior
-Autor: Cuervo_10
 """
 
 import datetime
@@ -23,17 +21,12 @@ def saludo(hora=None):
         return "¡Hola!", "Привет!"
 
 
-def main():
-    nombre = input("¿Cómo te llamas? / Как тебя зовут? ").strip() or "Crack"
-    es, ru = saludo()
-    ahora = datetime.datetime.now()
+nombre = input("¿Cómo te llamas? / Как тебя зовут? ").strip() or "Crack"
+es, ru = saludo()
+ahora = datetime.datetime.now()
 
-    print("\n" + "─" * 45)
-    print(f"  {es} {nombre}")
-    print(f"  {ru} {nombre}")
-    print(f"  {ahora:%d/%m/%Y  %H:%M}")
-    print("─" * 45)
-
-
-if __name__ == "__main__":
-    main()
+print("\n" + "─" * 45)
+print(f"  {es} {nombre}")
+print(f"  {ru} {nombre}")
+print(f"  {ahora:%d/%m/%Y  %H:%M}")
+print("─" * 45)
